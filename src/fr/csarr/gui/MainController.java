@@ -11,18 +11,11 @@ public class MainController {
     private MenuItem closeMenu;
     
     public MainController(){
-    	
     }
     
     @FXML
 	private void initialize() {
-		closeMenu.setOnAction(new EventHandler<ActionEvent>() {
-
-			@Override
-			public void handle(ActionEvent e) {
-				Platform.exit();
-			}
-		});
+		closeMenu.setOnAction(ActionEvent -> Platform.exit());
 	}
 }
 
