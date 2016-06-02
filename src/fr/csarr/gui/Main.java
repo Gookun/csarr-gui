@@ -3,14 +3,10 @@ package fr.csarr.gui;
 import java.io.IOException;
 
 import javafx.application.Application;
-import javafx.application.Platform;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -29,6 +25,8 @@ public class Main extends Application {
         this.primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("resources/csarr_logo_title.png")));
 
         initMainLayout();
+        
+        showPidTuning();
     }
 	
 	public static void main(String[] args) {
@@ -51,6 +49,23 @@ public class Main extends Application {
             primaryStage.setScene(scene);
             primaryStage.show();
 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    /**
+     * Shows the person overview inside the root layout.
+     */
+    public void showPidTuning() {
+        try {
+            // Load person overview.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource("view/PidTuningView.fxml"));
+            AnchorPane PidTuningView = (AnchorPane) loader.load();
+
+            // Set person overview into the center of root layout.
+            rootLayout.setCenter(PidTuningView);
         } catch (IOException e) {
             e.printStackTrace();
         }
