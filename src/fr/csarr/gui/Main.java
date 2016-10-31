@@ -3,10 +3,7 @@ package fr.csarr.gui;
 import java.io.IOException;
 
 import fr.csarr.gui.controller.PidTuningController;
-import fr.csarr.gui.model.PidData;
 import javafx.application.Application;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;

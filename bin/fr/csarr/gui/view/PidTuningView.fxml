@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.csarr.gui.controller.PidTuningController">
+   <children>
+      <SplitPane dividerPositions="0.35" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+            <Accordion maxWidth="400" minWidth="300">
+              <panes>
+                <TitledPane animated="false" text="PID tuning">
+                  <content>
+                    <AnchorPane>
+                           <children>
+                              <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label text="Distance">
+                                    </Label>
+                                    <GridPane>
+                                      <columnConstraints>
+                                        <ColumnConstraints percentWidth="20.0" />
+                                        <ColumnConstraints percentWidth="30.0" />
+                                          <ColumnConstraints percentWidth="20.0" />
+                                          <ColumnConstraints percentWidth="30.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label alignment="TOP_LEFT" text="Kp" GridPane.halignment="CENTER" />
+                                          <Label text="Ki" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                                          <Label text="Kd" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                          <TextField GridPane.columnIndex="1" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <TextField GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                          <Label text="vit_max" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                                          <Label text="acc_pos" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                                          <Label text="acc_neg" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                          <TextField GridPane.columnIndex="3" />
+                                          <TextField GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                                          <TextField GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                                          <TextField GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                          <Label text="Out max" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                       </children>
+                                    </GridPane>
+                                    <Separator prefWidth="200.0" />
+                                    <Label text="Angle">
+                                    </Label>
+                                    <GridPane>
+                                      <columnConstraints>
+                                        <ColumnConstraints percentWidth="20.0" />
+                                        <ColumnConstraints percentWidth="30.0" />
+                                          <ColumnConstraints percentWidth="20.0" />
+                                          <ColumnConstraints percentWidth="30.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label alignment="TOP_LEFT" text="Kp" GridPane.halignment="CENTER" />
+                                          <Label text="Ki" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                                          <Label text="Kd" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                          <TextField GridPane.columnIndex="1" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <TextField GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                          <Label text="vit_max" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                                          <Label text="acc_pos" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                                          <Label text="acc_neg" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                          <TextField GridPane.columnIndex="3" />
+                                          <TextField GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                                          <TextField GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                                          <TextField GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                          <Label text="Out max" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                          <Label alignment="CENTER" text="window arrival" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </TitledPane>
+                <TitledPane animated="false" text="Odometry settings">
+                  <content>
+                    <AnchorPane />
+                  </content>
+                </TitledPane>
+                <TitledPane animated="false" text="Graph settings">
+                  <content>
+                    <AnchorPane />
+                  </content>
+                </TitledPane>
+              </panes>
+            </Accordion>
+          <AnchorPane>
+               <children>
+                  <SplitPane dividerPositions="0.5" orientation="VERTICAL" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <items>
+                        <LineChart id="lineChart" fx:id="lineChart" title="Graph1">
+                          <xAxis>
+                            <NumberAxis side="BOTTOM" fx:id="xAxis" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis fx:id="yAxis" side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                        <LineChart title="Graph2" titleSide="BOTTOM">
+                          <xAxis>
+                            <NumberAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                     </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

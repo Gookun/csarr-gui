@@ -9,13 +9,6 @@ public class PidData {
 	private final IntegerProperty value;
     
     /**
-     * Default constructor.
-     */
-    public PidData() {
-        this(0, 0);
-    }
-
-    /**
      * Constructor with some initial data.
      * 
      * @param firstName

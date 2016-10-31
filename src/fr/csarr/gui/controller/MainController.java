@@ -1,5 +1,6 @@
 package fr.csarr.gui.controller;
 
+import fr.csarr.gui.DataManager;
 import fr.csarr.gui.Main;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -15,11 +16,16 @@ public class MainController {
     @FXML
     private MenuItem connectMenuItem;
     
+    @FXML
+    private MenuItem disconnectMenuItem;
+    
     public MainController(){
     }
     
     @FXML
 	private void initialize() {
+    	connectMenuItem.setOnAction(ActionEvent -> DataManager.getDataManager().createDataFromString("8;4"));
+    	disconnectMenuItem.setOnAction(ActionEvent -> DataManager.getDataManager().createDataFromString("9;5"));
     	closeMenuItem.setOnAction(ActionEvent -> Platform.exit());
 	}
     
